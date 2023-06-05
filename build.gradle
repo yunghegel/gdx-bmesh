@@ -1,19 +1,104 @@
 plugins {
     id 'java'
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
+    id 'publishing'
 }
 
 group 'org.yunghegel.gdx'
-version '1.0-SNAPSHOT'
+version '0.1-SNAPSHOT'
+project.description = "Implementation of Blender's bmesh data structure for use in libGDX"
+sourceCompatibility = 1.8
+
+tasks.register('sourcesJar', Jar) {
+    dependsOn classes
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+
+
+tasks.named('jar') {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': project.version)
+    }
+}
+
+
+
+tasks.register('javadocJar', Jar) {
+    dependsOn javadoc
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+signing {
+    required {gradle.taskGraph.hasTask("uploadArchives") }
+    def signingKey = findProperty("signingKey")
+    def signingPassword = findProperty("signingPassword")
+    useInMemoryPgpKeys(signingKey as String, signingPassword as String)
+    sign configurations.archives
+}
 
 repositories {
     mavenCentral()
+    maven { url 'https://s01.oss.sonatype.org' }
+    mavenLocal()
+    google()
+    gradlePluginPortal()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url 'https://jitpack.io' }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "https://oss.sonatype.org/content/repositories/releases/" }
 }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.badlogicgames.gdx:gdx:1.11.0'
+    implementation "com.badlogicgames.gdx:gdx-platform:1.11.0:natives-desktop"
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:1.11.0"
 }
 
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = 'gdx-bmesh'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+
+        }
+
+    }
+
+    repositories {
+        maven {
+            credentials{
+                username = ossrhUsername
+                password = ossrhPassword
+            }
+            name = rootProject.name
+            url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+
+
+        }
+    }
 }
