@@ -1,0 +1,287 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.yunghegel.gdx",
+    "module": "gdx-bmesh",
+    "version": "0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-freetype",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-freetype-platform",
+          "version": {
+            "requires": "1.12.0"
+          },
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "gdx-freetype-platform",
+              "type": "jar",
+              "extension": "jar",
+              "classifier": "natives-desktop"
+            }
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-bullet",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.kotcrab.vis",
+          "module": "vis-ui",
+          "version": {
+            "requires": "1.5.2"
+          }
+        },
+        {
+          "group": "com.github.mgsx-dev.gdx-gltf",
+          "module": "gltf",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "gdx-bmesh-0.1-SNAPSHOT.jar",
+          "url": "gdx-bmesh-0.1-SNAPSHOT.jar",
+          "size": 181367,
+          "sha512": "dface3455e2788fc2308b9aeaa4fa1c2546f81c6c904648d83c983195e849f115fba25dc4e5fa5297155783966b3760228e7df7a0f8c29e9a528947f62709a8c",
+          "sha256": "972f76fad3f8fd5b8fb3381a27f353d9f7e519b28df4f5d9ac489fa1a14c4b62",
+          "sha1": "7a1a4b170dc6eec806b6c6a1872ff81219d588d9",
+          "md5": "def38cb0c69622e99f4b4ff46f294b75"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-backend-lwjgl3",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-platform",
+          "version": {
+            "requires": "1.12.0"
+          },
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "gdx-platform",
+              "type": "jar",
+              "extension": "jar",
+              "classifier": "natives-desktop"
+            }
+          }
+        },
+        {
+          "group": "com.github.raeleus.stripe",
+          "module": "stripe",
+          "version": {
+            "requires": "1.4.5"
+          }
+        },
+        {
+          "group": "com.esotericsoftware.minlog",
+          "module": "minlog",
+          "version": {
+            "requires": "1.2"
+          }
+        },
+        {
+          "group": "com.github.crykn.guacamole",
+          "module": "core",
+          "version": {
+            "requires": "0.3.3"
+          }
+        },
+        {
+          "group": "com.github.crykn.guacamole",
+          "module": "gdx",
+          "version": {
+            "requires": "0.3.3"
+          }
+        },
+        {
+          "group": "com.github.crykn.guacamole",
+          "module": "gdx-desktop",
+          "version": {
+            "requires": "0.3.3"
+          }
+        },
+        {
+          "group": "com.github.tommyettinger",
+          "module": "libgdx-utils",
+          "version": {
+            "requires": "0.13.7"
+          }
+        },
+        {
+          "group": "com.github.raeleus.stripe",
+          "module": "freetype",
+          "version": {
+            "requires": "1.4.5"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.10.1"
+          }
+        },
+        {
+          "group": "org.yunghegel.gdx",
+          "module": "gdx-yung-utils",
+          "version": {
+            "requires": "0.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-freetype",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-freetype-platform",
+          "version": {
+            "requires": "1.12.0"
+          },
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "gdx-freetype-platform",
+              "type": "jar",
+              "extension": "jar",
+              "classifier": "natives-desktop"
+            }
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-bullet",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.kotcrab.vis",
+          "module": "vis-ui",
+          "version": {
+            "requires": "1.5.2"
+          }
+        },
+        {
+          "group": "com.github.mgsx-dev.gdx-gltf",
+          "module": "gltf",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "gdx-bmesh-0.1-SNAPSHOT.jar",
+          "url": "gdx-bmesh-0.1-SNAPSHOT.jar",
+          "size": 181367,
+          "sha512": "dface3455e2788fc2308b9aeaa4fa1c2546f81c6c904648d83c983195e849f115fba25dc4e5fa5297155783966b3760228e7df7a0f8c29e9a528947f62709a8c",
+          "sha256": "972f76fad3f8fd5b8fb3381a27f353d9f7e519b28df4f5d9ac489fa1a14c4b62",
+          "sha1": "7a1a4b170dc6eec806b6c6a1872ff81219d588d9",
+          "md5": "def38cb0c69622e99f4b4ff46f294b75"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gdx-bmesh-0.1-SNAPSHOT-sources.jar",
+          "url": "gdx-bmesh-0.1-SNAPSHOT-sources.jar",
+          "size": 89447,
+          "sha512": "aa57dd033e1ed176db70dc31210da8cd79bab106f535b10307e38ecd2c3b107478e7e448effefd39fefdbbd73029f841cba35b86abfa5e66e12297a0ec9e9574",
+          "sha256": "a20dee55927834a610f3db421bb7c9d9c7d92bfd40b7bf027d02a76d00230d6e",
+          "sha1": "3863d1fbcbfa55af7693a920cf9f63297b9b27e1",
+          "md5": "8f4d84dd918e63c35a850c561c1ee05f"
+        }
+      ]
+    }
+  ]
+}
