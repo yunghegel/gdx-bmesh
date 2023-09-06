@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Built-By: jamie
-Built-JDK: 17.0.8.1
+Built-JDK: 19.0.2
 Built-OS: Linux
 
