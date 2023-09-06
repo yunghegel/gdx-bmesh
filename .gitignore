@@ -11,7 +11,10 @@
 .mtj.tmp/
 
 #build dir
-build
+/build/*
+**/build/
+**/build/*
+**/build/**/*
 
 # Package Files #
 *.jar
