@@ -1,9 +1,12 @@
 
 group 'org.yunghegel.gdx'
-version '0.1-SNAPSHOT'
+version "$gdxBMeshVersion"
 
 dependencies {
-    implementation "org.yunghegel.gdx:gdx-yung-utils:0.1-SNAPSHOT"
+    implementation "org.yunghegel.gdx:gdx-yung-utils:$gdxYungUtilsVersion"
+    implementation "org.yunghegel.gdx:gdx-picking:$gdxPickingVersion"
+
+
 }
 
 publishing {
@@ -22,7 +25,7 @@ publishing {
         mavenJava(MavenPublication) {
                 groupId = "org.yunghegel.gdx"
                 artifactId = "gdx-bmesh"
-                version ="0.1-SNAPSHOT"
+                version =version
                 from components.java
         }
     }
