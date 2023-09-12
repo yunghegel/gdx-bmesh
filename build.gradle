@@ -1,10 +1,11 @@
+
 group 'org.yunghegel.gdx'
 version "$gdxBMeshVersion"
 
 dependencies {
-    // Define dependencies for gdx-scenegraph
-    implementation "org.yunghegel.gdx:gdx-picking:$gdxPickingVersion"
     implementation "org.yunghegel.gdx:gdx-yung-utils:$gdxYungUtilsVersion"
+    implementation "org.yunghegel.gdx:gdx-picking:$gdxPickingVersion"
+
 
 }
 
@@ -22,10 +23,13 @@ publishing {
 
     publications {
         mavenJava(MavenPublication) {
-            groupId = "org.yunghegel.gdx"
-            artifactId = "gdx-bmesh"
-            version = version
-            from components.java
+                groupId = "org.yunghegel.gdx"
+                artifactId = "gdx-bmesh"
+                version =version
+                from components.java
         }
     }
 }
+
+
+// Other configurations specific to gdx-bmesh
