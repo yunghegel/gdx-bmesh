@@ -6,7 +6,10 @@ import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import org.yunghegel.gdx.picking.Picker;
+<<<<<<< HEAD
 import org.yunghegel.gdx.picking.Pickable;
+=======
+>>>>>>> 76f512ba5f8efcf77743584d87e35e4603c29ebc
 
 
 public abstract class ElementPicker<E extends Element> {

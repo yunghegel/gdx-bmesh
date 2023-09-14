@@ -10,7 +10,7 @@ import com.badlogic.gdx.graphics.g3d.utils.RenderContext;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.Vector3;
 import org.lwjgl.opengl.GL11;
-import org.yunghegel.gdx.utils.picking.PickerIDAttribute;
+import org.yunghegel.gdx.picking.PickerIDAttribute;
 
 
 public class PickerShader extends BaseShader {

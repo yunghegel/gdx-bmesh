@@ -18,6 +18,9 @@
 build/*
 build/**
 
+bin/*
+bin
+
 # Package Files #
 *.jar
 *.war
@@ -31,3 +34,9 @@ build/**
 hs_err_pid*
 replay_pid*
 build/publications/mavenJava/module.json
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build

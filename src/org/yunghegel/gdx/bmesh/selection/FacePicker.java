@@ -14,7 +14,7 @@ import com.badlogic.gdx.graphics.g3d.utils.MeshPartBuilder;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import org.yunghegel.gdx.utils.picking.Pickable;
+import org.yunghegel.gdx.picking.Pickable;
 
 public class FacePicker extends ElementPicker<Face> {
 

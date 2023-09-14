@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="AhkProjectSettings">
     <option name="defaultAhkSdk" value="AutoHotkey v1.1.33" />
   </component>
@@ -7,4 +8,11 @@
     <option name="show" value="ASK" />
     <option name="description" value="" />
   </component>
+=======
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="Haxe toolkit" project-jdk-type="Haxe toolkit" />
+>>>>>>> 76f512ba5f8efcf77743584d87e35e4603c29ebc
 </project>
