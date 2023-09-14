@@ -31,5 +31,11 @@ publishing {
     }
 }
 
+tasks.getByName('build').dependsOn(tasks.create('logVersion').doFirst {
+//    log the java build params
+    println(compileJava.options)
+
+})
+
 
 // Other configurations specific to gdx-bmesh
