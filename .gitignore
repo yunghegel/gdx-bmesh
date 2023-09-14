@@ -34,3 +34,9 @@ bin
 hs_err_pid*
 replay_pid*
 build/publications/mavenJava/module.json
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
