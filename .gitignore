@@ -18,6 +18,9 @@
 build/*
 build/**
 
+bin/*
+bin
+
 # Package Files #
 *.jar
 *.war

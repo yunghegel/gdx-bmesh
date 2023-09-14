@@ -5,8 +5,8 @@ import org.yunghegel.gdx.bmesh.structure.BMesh;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import org.yunghegel.gdx.utils.picking.Pickable;
-import org.yunghegel.gdx.utils.picking.Picker;
+import org.yunghegel.gdx.picking.Picker;
+
 
 public abstract class ElementPicker<E extends Element> {
 
