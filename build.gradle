@@ -2,6 +2,13 @@
 group 'org.yunghegel.gdx'
 version "$gdxBMeshVersion"
 
+repositories {
+    maven {
+        name "yunghegelRepository"
+        url "https://repo.yunghegel.org/snapshots"
+    }
+}
+
 dependencies {
     implementation "org.yunghegel.gdx:gdx-yung-utils:$gdxYungUtilsVersion"
     implementation "org.yunghegel.gdx:gdx-picking:$gdxPickingVersion"
