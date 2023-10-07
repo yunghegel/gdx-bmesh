@@ -57,9 +57,7 @@ public class IFSVertexMap {
         int offset = attribute.offset / 4;
         int numComponents = attribute.numComponents;
         int stride = vertexSize / 4;
-        for(int i=0;i<numComponents;i++){
-            indexedVertices[index][offset+i]=vals[i];
-        }
+        System.arraycopy(vals, 0, indexedVertices[index], offset + 0, numComponents);
         check(indexedVertices[index]);
     }
 
@@ -74,9 +72,7 @@ public class IFSVertexMap {
         int offset = attribute.offset / 4;
         int numComponents = attribute.numComponents;
         int stride = vertexSize / 4;
-        for(int i=0;i<numComponents;i++){
-            indexedVertices[index][offset+i]=vals[i];
-        }
+        System.arraycopy(vals, 0, indexedVertices[index], offset + 0, numComponents);
         check(indexedVertices[index]);
     }
 
@@ -95,9 +91,8 @@ public class IFSVertexMap {
     public float[] toOneDimensionalArray(){
         float[] array = new float[vertexCount*floatsPerVertex];
         for(int i=0;i<vertexCount;i++){
-            for(int j=0;j<floatsPerVertex;j++){
-                array[i*floatsPerVertex+j]=indexedVertices[i][j];
-            }
+            if (floatsPerVertex >= 0)
+                System.arraycopy(indexedVertices[i], 0, array, i * floatsPerVertex + 0, floatsPerVertex);
         }
         return array;
     }

@@ -47,9 +47,7 @@ public class IFSFaceMap {
     public int[] toOneDimensionalArray(){
         int[] faces = new int[faceCount*faceSize];
         for(int i=0;i<faceCount;i++){
-            for(int j=0;j<faceSize;j++){
-                faces[i*faceSize+j]=indexedFaces[i][j];
-            }
+            if (faceSize >= 0) System.arraycopy(indexedFaces[i], 0, faces, i * faceSize + 0, faceSize);
         }
         return faces;
     }

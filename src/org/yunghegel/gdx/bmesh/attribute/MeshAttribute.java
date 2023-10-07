@@ -6,7 +6,7 @@ public abstract class MeshAttribute<E extends Element, TArray> {
     public static final String Normal               = "Normal";
     public static final String Tangent              = "Tangent";
     public static final String Binormal             = "Binormal";
-    public static final String Color                = "Color";
+    public static final String Color                = "Ansi";
     public static final String Size                 = "Size";
     public static final String Index                = "Index";
     public static final String InstanceData         = "InstanceData";

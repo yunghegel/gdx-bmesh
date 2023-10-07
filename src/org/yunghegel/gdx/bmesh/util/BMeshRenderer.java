@@ -230,7 +230,7 @@ public class BMeshRenderer extends ShapeRenderer {
         }
         setProjection3D();
         if(element.isSelected())
-            text(worldCoords,element.getClass().getSimpleName().substring(0,1)+"/"+element.getIndex());
+            text(worldCoords,element.getClass().getSimpleName().charAt(0)+"/"+element.getIndex());
 
         return clicked;
 
@@ -284,7 +284,7 @@ public class BMeshRenderer extends ShapeRenderer {
         Color desaturated = color.cpy().mul(desaturateAmnt);
 //        text(new Vector2(projPos.x, projPos.y), e.getClass().getSimpleName().substring(0,1)+"/"+e.getIndex());
 //        Gdx.gl.glDisable(GL20.GL_BLEND);
-        label(e.getClass().getSimpleName().substring(0,1)+"/"+e.getIndex(),worldCoords.mul(getTransformMatrix()),desaturated,true,5);
+        label(e.getClass().getSimpleName().charAt(0)+"/"+e.getIndex(),worldCoords.mul(getTransformMatrix()),desaturated,true,5);
     }
 
     public void face(Face face,Color color,boolean drawIndex){
@@ -564,14 +564,14 @@ public class BMeshRenderer extends ShapeRenderer {
 
     public void indexedElementView(){
 //        for (Vertex v : bmesh.vertices().getAll()) {
-//            vertex(v,Color.FOREST,true);
+//            vertex(v,Ansi.FOREST,true);
 //        }
 
             edges(bmesh,true,Color.FIREBRICK,Color.WHITE,true);
 
 //        for (Face f : bmesh.faces().getAll()) {
 //            set(ShapeType.Filled);
-//            face(f,Color.SLATE,true);
+//            face(f,Ansi.SLATE,true);
 //        }
     }
 

@@ -190,17 +190,17 @@ public class SelectionContext {
             Face face = (Face) selectedElement;
             tmpFaces.add(face);
 
-//            renderer.face(face,Color.ORANGE,false);
+//            renderer.face(face,Ansi.ORANGE,false);
         }
         if(selectedElement instanceof Edge){
             Edge edge = (Edge) selectedElement;
             tmpEdges.add(edge);
-//            renderer.edge(edge,true,Color.FIREBRICK,Color.RED,true);
+//            renderer.edge(edge,true,Ansi.FIREBRICK,Ansi.RED,true);
         }
         if(selectedElement instanceof Vertex){
             Vertex vertex = (Vertex) selectedElement;
             tmpVertices.add(vertex);
-//            renderer.vertex(vertex,Color.FIREBRICK,true);
+//            renderer.vertex(vertex,Ansi.FIREBRICK,true);
         }}
         renderer.set(ShapeRenderer.ShapeType.Filled);
         for (Face f :tmpFaces) {

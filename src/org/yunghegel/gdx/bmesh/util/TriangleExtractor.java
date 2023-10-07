@@ -12,7 +12,7 @@ public class TriangleExtractor {
     private short[] indexBuffer;
     private float[][] indexedPositions;
 
-    public static interface TriangleIndexVisitor{
+    public interface TriangleIndexVisitor{
         void visitTriangleIndices(int i1, int i2, int i3);
     }
 
@@ -110,7 +110,7 @@ public class TriangleExtractor {
         int posOffset = attribute.offset / 4;
         float[][] result = new float[mesh.getNumIndices()/3][];
         for(int i=0 ; i<indices.length ; i+=3){
-            int vertex = (int)(indices[i] & 0xFFFF);
+            int vertex = indices[i] & 0xFFFF;
             int vindex = vertex * stride + posOffset;
             float x = vertices[vindex];
             float y = vertices[vindex+1];

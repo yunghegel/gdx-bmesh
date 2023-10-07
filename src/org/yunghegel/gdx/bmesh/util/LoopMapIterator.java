@@ -15,12 +15,12 @@ public final class LoopMapIterator<E> implements Iterator<E> {
     }
 
     @Override
-    public final boolean hasNext() {
+    public boolean hasNext() {
         return it.hasNext();
     }
 
     @Override
-    public final E next() {
+    public E next() {
         return mapFunc.apply(it.next());
     }
 }

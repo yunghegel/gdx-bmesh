@@ -45,9 +45,7 @@ public class GdxIFS extends IndexedFaceSet{
 
         for(int i=0; i<maxVertices; i+=mesh.getVertexSize()/4){
             float[] vertex = new float[mesh.getVertexSize()/4];
-            for(int j=0; j<vertex.length; j++){
-                vertex[j] = vertices[i+j];
-            }
+            System.arraycopy(vertices, i + 0, vertex, 0, vertex.length);
             addVertex(vertex, transform);
         }
 

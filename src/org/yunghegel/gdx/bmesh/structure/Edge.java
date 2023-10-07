@@ -285,10 +285,7 @@ public class Edge extends Element implements Json.Serializable {
     public boolean isAdjacentTo(Edge edge) {
         if(vertex0 == edge.vertex0 || vertex0 == edge.vertex1)
             return true;
-        else if(vertex1 == edge.vertex0 || vertex1 == edge.vertex1)
-            return true;
-
-        return false;
+        else return vertex1 == edge.vertex0 || vertex1 == edge.vertex1;
     }
 
 

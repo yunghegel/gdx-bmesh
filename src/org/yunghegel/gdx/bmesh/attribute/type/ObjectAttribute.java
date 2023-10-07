@@ -5,7 +5,7 @@ import org.yunghegel.gdx.bmesh.attribute.Element;
 import org.yunghegel.gdx.bmesh.attribute.MeshAttribute;
 
 public class ObjectAttribute<E extends Element, T> extends MeshAttribute<E, T[]> {
-    public static interface ArrayAllocator<T> {
+    public interface ArrayAllocator<T> {
         T[] alloc(int size);
     }
 
