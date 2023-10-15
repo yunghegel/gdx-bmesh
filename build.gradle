@@ -1,4 +1,7 @@
 
+
+
+
 group 'org.yunghegel.gdx'
 version "$gdxBMeshVersion"
 
@@ -12,6 +15,8 @@ repositories {
 dependencies {
     implementation "org.yunghegel.gdx:gdx-yung-utils:$gdxYungUtilsVersion"
     implementation "org.yunghegel.gdx:gdx-picking:$gdxPickingVersion"
+
+    implementation 'com.github.czyzby:gdx-kiwi:1.9.1.9.6'
 
 
 }
@@ -38,11 +43,4 @@ publishing {
     }
 }
 
-tasks.getByName('build').dependsOn(tasks.create('logVersion').doFirst {
-//    log the java build params
-    println(compileJava.options)
 
-})
-
-
-// Other configurations specific to gdx-bmesh
