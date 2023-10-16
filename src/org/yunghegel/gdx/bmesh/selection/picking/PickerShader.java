@@ -9,7 +9,6 @@ import com.badlogic.gdx.graphics.g3d.shaders.BaseShader;
 import com.badlogic.gdx.graphics.g3d.utils.RenderContext;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.Vector3;
-import org.lwjgl.opengl.GL11;
 import org.yunghegel.gdx.picking.PickerIDAttribute;
 
 
@@ -84,11 +83,11 @@ public class PickerShader extends BaseShader {
             set(UNIFORM_COLOR, vec3.set(goID.r, goID.g, goID.b));
         }
         Gdx.gl.glLineWidth(5f);
-        GL11.glPointSize(5f);
+
 
         renderable.meshPart.render(program);
         Gdx.gl.glLineWidth(1f);
-        GL11.glPointSize(1f);
+
     }
 
     @Override

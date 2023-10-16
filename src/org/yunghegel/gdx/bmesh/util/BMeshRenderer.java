@@ -25,7 +25,6 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.*;
 import com.badlogic.gdx.math.collision.BoundingBox;
 import com.badlogic.gdx.utils.GdxRuntimeException;
-import org.lwjgl.opengl.GL11;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -556,7 +555,6 @@ public class BMeshRenderer extends ShapeRenderer {
         for(Vertex v : mesh.vertices().getAll()){
             set(ShapeType.Point);
             setColor(new Color(0.1f,0.1f,0.1f,1));
-            GL11.glPointSize(6);
             point(v.position.x, v.position.y, v.position.z);
         }
         setColor(col);
